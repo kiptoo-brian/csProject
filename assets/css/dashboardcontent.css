@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw;
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+  .container > * {
+    padding: 40px;
+    font-size: 3rem; }
+
+.toppart {
+  background-color: #c69963;
+  grid-column: full-start / col-end 6; }
+
+.stakeholders {
+  background-color: green;
+  grid-column: col-start 7/ full-end; }
+
+.shareholders__pictures {
+  background-color: #101d2c;
+  grid-column: full-start / col-end 4; }
+
+.shareholders__content {
+  background-color: red;
+  grid-column: col-start 5 / full-end;
+  padding: 6rem 12rem; }

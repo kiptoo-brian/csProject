@@ -1,0 +1,285 @@
+@use '../abstracts/customVar' as *;
+@use '../abstracts/mixins' as *;
+
+
+// intro-section----------------
+.intro-section {
+    @include gradient;
+    padding: 10rem 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intros {
+
+
+    .video-box {
+        position: relative;
+
+
+        a {
+            // @include absoluteCenter;
+
+            span {
+
+
+                i {
+
+                    font-size: 6rem;
+                    color: $secondary;
+
+                }
+            }
+        }
+    }
+}
+
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    border: 0.55rem solid $white;
+    border-radius: 50%;
+    animation: pulse-border 1.5s linear infinite;
+
+    &--border-1 {
+        animation-delay: 1s;
+    }
+    &--border-2 {
+        animation-delay: 1.5s;
+    }
+}
+
+
+// company section-----------------
+.campanies {
+    padding:  0 0 5rem 0;
+
+    &__logo-box {
+        max-width: 100%;
+        height: 3rem;
+        margin-bottom: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+        position: relative;
+
+        img {
+            height: 100%;
+
+            &:hover {
+                filter: grayscale(120);
+            }
+        }
+    }
+}
+
+
+// services-section-----------------
+.services {
+    position: relative;
+    padding: 1rem 0;
+
+    &__content {
+        padding: 1rem;
+        margin-top: 0;
+
+        p {
+            font-size: 0.8rem;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1rem;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 5rem;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            color: $primary;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    &__pic {
+        max-width: 100%;
+    }
+}
+
+
+// testimonials-section-------------
+.testimonials {
+    position: relative;
+    padding: 0;
+    @include gradient;
+
+    &__card {
+        background-color: rgba($white, 0.8);
+        padding: 2rem 1.25rem;
+        border-radius: 0.625rem;
+        height: auto;
+        text-align: center;
+
+        i {
+            font-size: 1.5rem;
+            color: rgba($primary, 0.7);
+        }
+
+        .ratings {
+
+
+            i {
+                color: rgba($primary, 0.7);
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__picture {
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            border: 0.325rem solid rgba($primary, 0.7);
+        }
+    }
+
+    &__name{
+        padding-top: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 500;
+        color: $white;
+
+        h3 {
+            padding-top: 0.8rem;
+            text-transform: capitalize;
+        }
+
+        p {
+            padding-bottom: 2rem;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+// portfolio section0-----------------
+.portfolio {
+    padding: 4rem 0;
+
+    button {
+        text-transform: capitalize;
+    }
+}
+
+.portfolio-box {
+    position: relative;
+    width: 100%;
+    height: 18.5rem;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    border-top: 0.5rem  solid lighten($primary, 20%);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio-info {
+        background-color: rgba($primary, 0.75);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        .caption {
+        text-align: center;
+        color: $white;
+        @include absoluteCenter;
+
+            h4 {
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+    }
+    &:hover {
+
+        img {
+            transform: scale(1.5);
+            @include transitionProperty;
+        }
+        .portfolio-info {
+            opacity: 1;
+            visibility: visible;
+            @include transitionProperty;
+        }
+    }
+}
+
+
+
+// ---------get-started section-----------
+.get-started {
+    padding: 4rem 0;
+    background-color: $gray-200;
+}
+
+.cta-info {
+    padding: 3rem;
+    margin: 1rem 0;
+
+    &__list {
+        position: relative;
+        list-style-type: none;
+        display: block;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.7rem;
+
+        li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f00c";
+            font-weight: 600;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// FORM CONTENT 
+.form {
+    padding: 3rem;
+
+    button {
+        border: none;
+        color: $white;
+        text-transform: capitalize;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+
+
+
+
+
